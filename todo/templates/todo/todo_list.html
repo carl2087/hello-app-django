@@ -18,7 +18,13 @@
             {% else %}
                 <td>{{ item.name }}</td>
             {% endif %}
+            <td>
+                <a href="/edit/{{ item.id }}">
+                    <button>Edit</button>
+                </a>
+            </td>
         </tr>
+        <!-- we use the empty tag for if the list is empty -->
         {% empty %}
         <tr><td>You have nothing to do</td></tr>
     {% endfor %}
